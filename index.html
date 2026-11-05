@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr. Trent Dee Stephens, PhD | Author and Educator</title>
+<meta name="description" content="The books of Dr. Trent Dee Stephens, PhD: works spanning anatomy, embryology, science, religion, medieval history, and historical fiction.">
+<meta property="og:title" content="Dr. Trent Dee Stephens, PhD | Author and Educator">
+<meta property="og:description" content="The books of Dr. Trent Dee Stephens, PhD: works spanning anatomy, embryology, science, religion, medieval history, and historical fiction.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:wght@500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>*{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: a preserved archive. Dark walnut opening, ivory reading room, parchment catalogue of 12 evenly shelved volumes, forest-green colophon. */
+:root {
+  --parchment: #E9DFC8;
+  --ivory: #F5F0E5;
+  --walnut: #302319;
+  --forest: #29382D;
+  --gold: #A68A53;
+  --charcoal: #292722;
+  --ink-soft: #4d463b;
+  --line: rgba(166,138,83,.55);
+  --display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --label: "Cinzel", "Times New Roman", Georgia, serif;
+  --body: "EB Garamond", "Iowan Old Style", Georgia, serif;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .19 0 0 0 0 .14 0 0 0 0 .1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body { background: var(--ivory); color: var(--charcoal); font-family: var(--body); font-size: 1.1875rem; line-height: 1.6; overflow-x: hidden; }
+h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.1; text-wrap: balance; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--walnut); }
+
+.wrap { max-width: 1160px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+/* Navigation */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--walnut); color: var(--ivory); border-bottom: 1px solid var(--gold); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.5rem; }
+.nav-name { font-family: var(--display); font-size: 1.25rem; text-decoration: none; white-space: nowrap; }
+.nav ul { display: flex; gap: clamp(1rem, 3vw, 2.25rem); list-style: none; margin: 0; padding: 0; }
+.nav li a { font-family: var(--label); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; padding-block: .6rem; display: block; border-bottom: 1px solid transparent; transition: border-color .2s, color .2s; }
+.nav li a:hover { color: var(--parchment); border-bottom-color: var(--gold); }
+
+/* Opening */
+.hero { position: relative; background: var(--walnut); color: var(--ivory); overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: 0; background: var(--grain); pointer-events: none; }
+.hero-arcade { position: absolute; right: -2%; bottom: 0; height: 100%; width: 48%; color: var(--gold); opacity: .3; }
+.hero .wrap { position: relative; z-index: 1; padding-block: clamp(4.5rem, 10vw, 8rem); }
+.hero-inner { max-width: 40rem; display: grid; gap: 1.5rem; }
+.hero-name { font-family: var(--label); font-size: 1rem; letter-spacing: .16em; text-transform: uppercase; color: var(--parchment); }
+.hero h1 { font-size: clamp(2.6rem, 6.2vw, 4.6rem); }
+.hero-intro { font-size: 1.25rem; color: var(--parchment); max-width: 36rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .85rem; padding-top: .5rem; }
+.btn { font-family: var(--label); font-size: .8rem; letter-spacing: .13em; text-transform: uppercase; text-decoration: none; text-align: center; padding: .9rem 1.5rem; border: 1px solid var(--gold); background: transparent; color: inherit; cursor: pointer; transition: background .2s, color .2s; }
+.btn-solid { background: var(--gold); color: #1f160f; }
+.btn-solid:hover { background: var(--parchment); border-color: var(--parchment); }
+.btn-ghost:hover { background: var(--ivory); color: var(--walnut); border-color: var(--ivory); }
+
+/* Ornamental divider */
+.rule { display: flex; align-items: center; gap: .9rem; color: var(--gold); }
+.rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: currentColor; }
+.rule svg { width: 16px; height: 16px; flex: none; }
+
+/* About */
+.about .wrap { padding-block: clamp(4rem, 8vw, 6.5rem); display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.portrait { aspect-ratio: 4 / 5; max-width: 100%; border: 1px solid var(--gold); padding: 8px; background: var(--parchment); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.portrait-empty { height: 100%; display: grid; place-content: center; text-align: center; padding: 1rem; border: 1px dashed var(--gold); color: var(--ink-soft); font-size: 1rem; }
+.about-text { display: grid; gap: 1.15rem; max-width: 40rem; min-width: 0; }
+.about h2, .books-head h2, .contact h2 { font-size: clamp(2.2rem, 4.5vw, 3.25rem); }
+.about-text p:first-of-type::first-letter { font-family: var(--display); float: left; font-size: 3.5rem; line-height: .95; padding: .35rem .6rem .3rem; margin: .3rem .7rem 0 0; background: var(--forest); color: var(--parchment); border: 1px solid var(--gold); }
+.creds { list-style: none; margin: .4rem 0 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+.creds li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding-block: .55rem; border-bottom: 1px solid var(--line); font-size: 1.0625rem; }
+.creds b { font-family: var(--label); font-weight: 500; font-size: .85rem; letter-spacing: .06em; padding-top: .15rem; font-variant-numeric: lining-nums; }
+
+/* The book collection */
+.books { background: var(--parchment) var(--grain); }
+.books .wrap { padding-block: clamp(4rem, 8vw, 6.5rem); display: grid; gap: clamp(2.5rem, 5vw, 4rem); }
+.books-head { display: grid; gap: .9rem; text-align: center; justify-items: center; }
+.books-head p { font-size: 1.25rem; color: var(--ink-soft); max-width: 34rem; }
+.books-head .rule { width: min(320px, 100%); }
+.shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.25rem, 2.6vw, 2.25rem); }
+.book { display: flex; flex-direction: column; min-width: 0; background: var(--ivory); border: 1px solid var(--line); padding: 1rem 1rem 1.35rem; transition: transform .25s ease, border-color .25s, box-shadow .25s; }
+.book:hover { transform: translateY(-3px); border-color: var(--gold); box-shadow: 0 10px 24px rgba(48,35,25,.16); }
+.cover-frame { aspect-ratio: 2 / 3; max-width: 100%; width: 100%; background: var(--walnut); display: grid; place-items: center; overflow: hidden; }
+.cover-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.cover-blank { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .7rem; text-align: center; padding: 1.5rem; color: var(--parchment); background: var(--forest); outline: 1px solid var(--gold); outline-offset: -10px; }
+.cover-blank strong { font-family: var(--display); font-weight: 500; font-size: clamp(1.3rem, 2.3vw, 1.9rem); line-height: 1.15; }
+.cover-blank span { font-size: .95rem; font-style: italic; }
+.book-body { display: flex; flex-direction: column; gap: .5rem; flex: 1; padding-top: 1.1rem; }
+.book-no { font-family: var(--label); font-size: .72rem; letter-spacing: .14em; color: var(--ink-soft); }
+.book h3 { font-size: 1.6rem; }
+.book-sub { font-size: 1rem; font-style: italic; color: var(--ink-soft); line-height: 1.35; }
+.book-desc { font-size: 1.0625rem; line-height: 1.45; }
+.book .btn { margin-top: auto; align-self: flex-start; color: var(--walnut); font-size: .72rem; padding: .7rem 1.1rem; }
+.book-desc { margin-bottom: .75rem; }
+.book .btn:hover { background: var(--walnut); color: var(--ivory); border-color: var(--walnut); }
+.book.pending { background: transparent; border-style: dashed; }
+
+/* Book details */
+dialog { border: 1px solid var(--gold); background: var(--ivory); color: var(--charcoal); padding: 0; width: min(760px, calc(100% - 32px)); max-height: 88vh; overflow: auto; }
+dialog::backdrop { background: rgba(41,39,34,.72); }
+.detail { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 1.75rem; padding: clamp(1.25rem, 4vw, 2.25rem); }
+.detail-text { display: grid; gap: .75rem; align-content: start; min-width: 0; }
+.detail h3 { font-size: 2.1rem; padding-right: 2rem; }
+.detail-meta { font-size: 1rem; color: var(--ink-soft); }
+.detail-text p + p { margin-top: .1rem; }
+.close { position: sticky; float: right; top: .6rem; margin: .6rem .6rem 0 0; z-index: 1; width: 2.5rem; height: 2.5rem; font-size: 1.5rem; line-height: 1; background: var(--ivory); border: 1px solid var(--gold); color: var(--walnut); cursor: pointer; }
+
+/* Contact */
+.contact { background: var(--parchment) var(--grain); border-top: 1px solid var(--gold); }
+.contact .wrap { padding-block: clamp(4rem, 8vw, 6rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(2rem, 6vw, 5rem); }
+.contact-info { display: grid; gap: 1.1rem; align-content: start; min-width: 0; }
+.contact-line { display: grid; gap: .1rem; }
+.contact-line span { font-family: var(--label); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+.contact-line a { font-size: 1.3rem; overflow-wrap: anywhere; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; min-width: 0; }
+.field { display: grid; gap: .3rem; min-width: 0; }
+.field-wide { grid-column: 1 / -1; }
+label { font-family: var(--label); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; }
+input, textarea { font: inherit; font-size: 1.0625rem; color: var(--charcoal); background: var(--ivory); border: 1px solid var(--gold); padding: .65rem .8rem; width: 100%; box-sizing: border-box; border-radius: 0; }
+textarea { min-height: 9rem; resize: vertical; }
+[aria-invalid="true"] { border-color: #8a2b1d; }
+.err { color: #8a2b1d; font-size: .98rem; min-height: 0; }
+.form-foot { grid-column: 1 / -1; display: grid; gap: .9rem; justify-items: start; }
+.form-foot .btn { background: var(--walnut); color: var(--ivory); border-color: var(--walnut); }
+.form-foot .btn:hover { background: var(--forest); }
+.status { background: var(--ivory); border: 1px solid var(--gold); padding: .9rem 1rem; display: grid; gap: .6rem; font-size: 1.0625rem; width: 100%; box-sizing: border-box; }
+.status a { font-weight: 500; }
+
+footer { background: var(--forest); color: var(--parchment); font-size: 1rem; }
+footer .wrap { padding-block: 1.6rem; text-align: center; }
+
+@media (max-width: 860px) {
+  .about .wrap, .contact .wrap { grid-template-columns: minmax(0, 1fr); }
+  .portrait { width: 240px; }
+  .hero-arcade { width: 100%; opacity: .14; right: 0; }
+  .book { padding: .7rem .7rem 1.1rem; }
+  .book h3 { font-size: 1.35rem; }
+}
+@media (max-width: 620px) {
+  .shelf { grid-template-columns: minmax(0, 1fr); max-width: 22rem; margin-inline: auto; width: 100%; }
+  .book { padding: 1rem 1rem 1.35rem; }
+  .book h3 { font-size: 1.6rem; }
+  .detail { grid-template-columns: minmax(0, 1fr); }
+  .detail .cover-frame { max-width: 170px; }
+  form { grid-template-columns: minmax(0, 1fr); }
+  .nav-name { display: none; }
+  .nav .wrap { justify-content: center; }
+  .btn { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .book, .btn { transition: none; }
+  .book:hover { transform: none; }
+}
+</style>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="nav-name" href="#home">Trent Dee Stephens, PhD</a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+<header class="hero" id="home">
+  <svg class="hero-arcade" viewBox="0 0 600 500" preserveAspectRatio="xMaxYMax slice" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+    <g id="lancet">
+      <path d="M40 500V210C40 130 90 80 130 40C170 80 220 130 220 210V500"/>
+      <path d="M58 500V214C58 150 98 108 130 72C162 108 202 150 202 214V500"/>
+      <path d="M130 72V500M58 300H202M58 400H202"/>
+      <circle cx="130" cy="185" r="30"/>
+    </g>
+    <use href="#lancet" x="190"/>
+    <use href="#lancet" x="380"/>
+    <path d="M0 500H600"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="hero-name">Dr. Trent Dee Stephens, PhD</p>
+      <h1>Exploring Knowledge Through Science, History, and Literature.</h1>
+      <p class="hero-intro">Dr. Trent Dee Stephens is an accomplished author and educator whose published works explore a wide range of subjects, including anatomy, embryology, science, religion, medieval history, and historical fiction. His writing reflects decades of research, teaching, and intellectual curiosity.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="#books">Explore the Books</a>
+        <a class="btn btn-ghost" href="#about">About the Author</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <figure class="portrait" id="portrait">
+      <div class="portrait-empty">Author portrait to be supplied</div>
+    </figure>
+    <div class="about-text">
+      <h2 id="about-h">About Dr. Trent Dee Stephens</h2>
+      <p>Dr. Stephens earned BS degrees in Microbiology and Zoology and an MS in Zoology from Brigham Young University, then a PhD in Anatomy from the University of Pennsylvania. After postdoctoral training at the University of Washington, he joined Idaho State University in 1981, where he taught Anatomy and Developmental Biology for approximately 30 years.</p>
+      <ul class="creds">
+        <li><b>1981</b><span>Joined Idaho State University</span></li>
+        <li><b>1992</b><span>Recognized as Distinguished Teacher</span></li>
+        <li><b>2000</b><span>Recognized as Outstanding Researcher</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="books" id="books" aria-labelledby="books-h">
+  <div class="wrap">
+    <div class="books-head">
+      <h2 id="books-h">The Books of Trent Dee Stephens</h2>
+      <p>Explore a collection of works spanning science, history, faith, and literature.</p>
+      <div class="rule" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg></div>
+    </div>
+    <ul class="shelf" id="shelf"></ul>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-info">
+      <h2 id="contact-h">Get in Touch</h2>
+      <div class="contact-line"><span>Email</span><a href="mailto:stephenstrent7@gmail.com">stephenstrent7@gmail.com</a></div>
+      <div class="contact-line"><span>Phone</span><a href="tel:+12082404994">208-240-4994</a></div>
+    </div>
+    <form id="contact-form" novalidate>
+      <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" autocomplete="name" required><div class="err" id="cf-name-err"></div></div>
+      <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required><div class="err" id="cf-email-err"></div></div>
+      <div class="field field-wide"><label for="cf-subject">Subject</label><input id="cf-subject" name="subject" required><div class="err" id="cf-subject-err"></div></div>
+      <div class="field field-wide"><label for="cf-message">Message</label><textarea id="cf-message" name="message" required></textarea><div class="err" id="cf-message-err"></div></div>
+      <div class="form-foot">
+        <button class="btn" type="submit">Send Message</button>
+        <div class="status" id="cf-status" role="status" hidden></div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr">2026</span> Trent Dee Stephens, PhD</div></footer>
+
+<dialog id="book-dialog" aria-labelledby="d-title">
+  <button class="close" id="d-close" type="button" aria-label="Close book details">&times;</button>
+  <div class="detail">
+    <div id="d-cover"></div>
+    <div class="detail-text">
+      <h3 id="d-title"></h3>
+      <p class="book-sub" id="d-sub"></p>
+      <p class="detail-meta" id="d-meta"></p>
+      <div class="detail-text" id="d-body"></div>
+      <a class="btn" id="d-link" target="_blank" rel="noopener" hidden>Purchase This Book</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* =====================================================================
+   SITE SETTINGS
+   CONTACT_ENDPOINT: paste a form service URL (Formspree, Web3Forms, etc.)
+   so the form delivers messages. While empty, the form validates and then
+   hands the visitor a ready-made email instead.
+   ===================================================================== */
+const CONTACT_ENDPOINT = "";
+const CONTACT_EMAIL = "stephenstrent7@gmail.com";
+const PORTRAIT = "assets/author.jpg"; /* add this file to show the photo */
+
+/* =====================================================================
+   THE 12 BOOKS. Edit here.
+   cover: file in assets/covers/
+   link:  official purchase URL. Leave "" until one is confirmed.
+   To fill a Coming Soon entry, replace it with a full entry like those above.
+   ===================================================================== */
+const BOOKS = [
+  { title: "Science and the Old Testament", cover: "science-old-testament.jpg", link: "",
+    short: "The now-known science behind familiar Old Testament stories, written to help readers think and ponder the scriptures more deeply.",
+    details: ["Who wrote the Old Testament? Dr. Stephens believes it was written by inspired prophets through the filter of the writer’s mind, time, and paradigms. He has always loved its stories and been curious about the science behind them.", "In some cases, modern scientific discoveries enhance the specifics of a story. In others, as with Jacob’s piebald sheep, science helps us understand the cultural mindset and paradigms from which the Old Testament emerged."] },
+  { title: "Science and the New Testament", sub: "Book Two of the Series Science and the Scriptures", cover: "science-new-testament.jpg", link: "",
+    short: "The science associated with events recorded in the New Testament, written from a faithful perspective.",
+    details: ["This book follows Science and the Old Testament and addresses the science associated with many of the events recorded in the New Testament, written from a faithful perspective of where science and religion embrace, without compromising either.", "Dr. Stephens asks what he would have seen among the five thousand, or in the closed room as Jesus ate fish and honeycomb, and what the testimony of the literal resurrection means from a scientific perspective."] },
+  { title: "Noah's Flood and the Philosophies of Men", cover: "noahs-flood.jpg", link: "",
+    short: "What if the Biblical story of the Great Flood is mostly true, but a few details got mixed up along the way?",
+    details: ["What if, during the Babylonian captivity, the Judean story of Noah’s Flood got mixed up with the Gilgamesh Epic of Utnapishtim’s flood? Dr. Stephens compares the two accounts and traces the ark’s possible journey according to Latter-day Saint theology.", "As an ardent Christian, he believes there was a real flood in Noah’s experience. As a biologist, he doesn’t believe all plant and animal life was wiped out and had to start from scratch a little over 4000 years ago."] },
+  { title: "The Image of God?", sub: "Nobody's Perfect: Our Divine Nature, Mortal Journey, and the Beauty of Imperfection", cover: "image-of-god.jpg", link: "",
+    short: "An anatomist and developmental biologist shares his knowledge of mortal life, prenatal development, and birth defects.",
+    details: ["Dr. Stephens, an anatomist, developmental biologist, and dysmorphologist, shares his knowledge concerning mortal life, prenatal development, and birth defects, within the theology of The Church of Jesus Christ of Latter-day Saints.", "All of us have birth defects, and nobody’s perfect. The solution is tolerance of ourselves and of those around us, each struggling with his or her own imperfections."] },
+  { title: "The Immortal Messiah", sub: "The Physiology of Resurrected Beings", cover: "immortal-messiah.jpg", meta: "September 2022, Cedar Fort Publishing", link: "",
+    short: "What eyewitness accounts of Christ’s resurrection imply, anatomically and physiologically, about resurrected bodies.",
+    details: ["Eyewitness accounts tell us that the resurrected Christ looked somewhat different, could enter a room without using a door, had a body of flesh and bones, retained the marks of His crucifixion, and could eat food.", "These details carry large anatomical and physiological implications. The book examines them to give more understanding of God, Jesus Christ, and ourselves."] },
+  { title: "Who Is Adam?", sub: "Where Science Meets Religion", cover: "who-is-adam.jpg", meta: "November 2023", link: "",
+    short: "A scientist and Latter-day Saint examines the man who appears to stand so firmly between science and religion.",
+    details: ["Perhaps the greatest contributor to the perceived gulf between the Biblical and scientific stories of creation is the man Adam. Dr. Stephens proposes that Adam’s critical role in the Plan of Salvation occurred primarily in the premortal realm of spirits.", "The book addresses questions such as whether there was blood or death before the Fall, writing from the perspective of science and of what the scriptures actually say and don’t say."] },
+  { title: "Latter-day Saint White Ops", cover: "white-ops.jpg", meta: "July 2023", link: "",
+    short: "A largely tongue-in-cheek and autobiographical account of the real power behind the Church’s preparedness program.",
+    details: ["Ted Koppel’s Lights Out praised the preparedness program of The Church of Jesus Christ of Latter-day Saints but hardly mentioned who was responsible for it.", "Growing up in the home of a Relief Society mother and wife, and later serving as a bishop, Dr. Stephens offers a largely tongue-in-cheek and autobiographical account of who is really in charge."] },
+  { title: "The Last Tournament", sub: "Book 2 of William de Braose, Squire of Winchester", cover: "last-tournament.jpg", meta: "July 2023", link: "",
+    short: "England, 1232. Young William rides beside his father to his first tournament, unaware of the storm brewing at court.",
+    details: ["England was a very dangerous place in 1232. Twenty-four-year-old Henry III was controlled by the powerful men around him. As William rode beside his father to the great Salisbury Tournament, his first and his father’s last, he was largely unaware of what was coming.", "Much of the book is true. Most of the noble families were real people, and every place is real, with GPS coordinates to find it on Google Earth. A closing section, “Learn More About It,” is an illustrated glossary of the book’s words, names, and places."] },
+  { comingSoon: true },
+  { comingSoon: true },
+  { comingSoon: true },
+  { comingSoon: true }
+];
+
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
+const nameOf = b => b.title || "Coming Soon";
+
+/* Local cover first, then the original image, then a labeled placeholder. Never another book's cover. */
+function coverFrame(b) {
+  const frame = el("div", "cover-frame");
+  const blank = () => {
+    frame.replaceChildren();
+    const c = el("div", "cover-blank");
+    c.append(el("strong", "", nameOf(b)));
+    frame.append(c);
+  };
+  const sources = [b.cover && "assets/covers/" + b.cover].filter(Boolean);
+  if (!sources.length) { blank(); return frame; }
+  const img = new Image();
+  img.alt = "Cover of " + nameOf(b);
+  img.loading = "lazy";
+  img.decoding = "async";
+  let i = 0;
+  img.onerror = () => { i++; if (i < sources.length) img.src = sources[i]; else blank(); };
+  img.src = sources[0];
+  frame.append(img);
+  return frame;
+}
+
+const shelf = document.getElementById("shelf");
+BOOKS.forEach((b, i) => {
+  const li = el("li", "book" + (b.comingSoon ? " pending" : ""));
+  li.append(coverFrame(b));
+  if (!b.comingSoon) {
+    const body = el("div", "book-body");
+    body.append(el("h3", "", b.title));
+    if (b.sub) body.append(el("p", "book-sub", b.sub));
+    body.append(el("p", "book-desc", b.short));
+    const btn = el("button", "btn", "View Book");
+    btn.type = "button";
+    btn.setAttribute("aria-label", "View details: " + b.title);
+    btn.addEventListener("click", () => openBook(b));
+    body.append(btn);
+    li.append(body);
+  }
+  shelf.append(li);
+});
+
+const dlg = document.getElementById("book-dialog");
+function openBook(b) {
+  document.getElementById("d-cover").replaceChildren(coverFrame(b));
+  document.getElementById("d-title").textContent = nameOf(b);
+  const sub = document.getElementById("d-sub");
+  sub.textContent = b.sub || ""; sub.hidden = !b.sub;
+  const meta = document.getElementById("d-meta");
+  meta.textContent = [b.by, b.meta].filter(Boolean).join(". "); meta.hidden = !meta.textContent;
+  const body = document.getElementById("d-body");
+  const paras = b.details && b.details.length ? b.details : ["Details for this book will be added soon."];
+  body.replaceChildren(...paras.map(t => el("p", "", t)));
+  const link = document.getElementById("d-link");
+  link.hidden = !b.link;
+  if (b.link) link.href = b.link; else link.removeAttribute("href");
+  dlg.showModal();
+}
+document.getElementById("d-close").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+/* Author portrait appears as soon as assets/author.jpg exists */
+(() => {
+  const img = new Image();
+  img.alt = "Dr. Trent Dee Stephens";
+  img.onload = () => document.getElementById("portrait").replaceChildren(img);
+  img.src = PORTRAIT;
+})();
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* Contact form */
+const form = document.getElementById("contact-form");
+const statusBox = document.getElementById("cf-status");
+const RULES = {
+  name: v => v ? "" : "Please enter your name.",
+  email: v => !v ? "Please enter your email address." : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Please check your email address. It should look like name@example.com.",
+  subject: v => v ? "" : "Please add a subject.",
+  message: v => v ? "" : "Please write your message."
+};
+function check(name) {
+  const input = form.elements[name];
+  const msg = RULES[name](input.value.trim());
+  input.setAttribute("aria-invalid", msg ? "true" : "false");
+  document.getElementById(input.id + "-err").textContent = msg;
+  return !msg;
+}
+Object.keys(RULES).forEach(n => form.elements[n].addEventListener("input", () => { if (form.elements[n].getAttribute("aria-invalid") === "true") check(n); }));
+
+function showEmailFallback(d, lead) {
+  const text = "From: " + d.name + " <" + d.email + ">\n\n" + d.message;
+  const href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(d.subject) + "&body=" + encodeURIComponent(text);
+  const a = el("a", "", "Open in your email app"); a.href = href;
+  const copy = el("button", "btn", "Copy Message"); copy.type = "button"; copy.style.justifySelf = "start"; copy.style.color = "var(--walnut)";
+  copy.addEventListener("click", () => {
+    navigator.clipboard.writeText("To: " + CONTACT_EMAIL + "\nSubject: " + d.subject + "\n\n" + text)
+      .then(() => { copy.textContent = "Copied"; })
+      .catch(() => { copy.textContent = "Copy unavailable"; });
+  });
+  statusBox.replaceChildren(el("span", "", lead), a, copy);
+  statusBox.hidden = false;
+}
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const results = Object.keys(RULES).map(check);
+  if (results.includes(false)) { form.querySelector('[aria-invalid="true"]').focus(); statusBox.hidden = true; return; }
+  const d = Object.fromEntries(new FormData(form).entries());
+  if (!CONTACT_ENDPOINT) {
+    showEmailFallback(d, "Your message is ready but has not been sent. Please send it to " + CONTACT_EMAIL + ".");
+    return;
+  }
+  try {
+    const res = await fetch(CONTACT_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(d) });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    statusBox.replaceChildren(el("span", "", "Thank you. Your message has been sent."));
+    statusBox.hidden = false;
+  } catch (err) {
+    showEmailFallback(d, "Your message could not be sent from this page. Please email it to " + CONTACT_EMAIL + ".");
+  }
+});
+</script>
+
+</body>
+</html>
