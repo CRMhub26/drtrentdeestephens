@@ -101,7 +101,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .book-sub { font-size: 1rem; font-style: italic; color: var(--ink-soft); line-height: 1.35; }
 .book-desc { font-size: 1.0625rem; line-height: 1.45; }
 .book .btn { margin-top: auto; align-self: flex-start; color: var(--walnut); font-size: .72rem; padding: .7rem 1.1rem; }
-.book-desc { margin-bottom: .75rem; }
+.book-desc { margin-bottom: .25rem; }
+.price { display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem; margin-bottom: .75rem; font-family: var(--display); font-size: 1.55rem; font-weight: 500; color: var(--walnut); font-variant-numeric: lining-nums; }
+.price small { font-family: var(--body); font-size: .92rem; font-style: italic; font-weight: 400; color: var(--ink-soft); }
 .book .btn:hover { background: var(--walnut); color: var(--ivory); border-color: var(--walnut); }
 .book.pending { background: transparent; border-style: dashed; }
 
@@ -261,6 +263,7 @@ footer .wrap { padding-block: 1.6rem; text-align: center; }
       <h3 id="d-title"></h3>
       <p class="book-sub" id="d-sub"></p>
       <p class="detail-meta" id="d-meta"></p>
+      <p class="price" id="d-price"></p>
       <div class="detail-text" id="d-body"></div>
       <a class="btn" id="d-link" target="_blank" rel="noopener" hidden>Purchase This Book</a>
     </div>
@@ -281,32 +284,33 @@ const PORTRAIT = "assets/author.jpg"; /* add this file to show the photo */
 /* =====================================================================
    THE 12 BOOKS. Edit here.
    cover: file in assets/covers/
+   price: shown in US dollars. sample: true labels it "Sample price"; delete that when the real price is set.
    link:  official purchase URL. Leave "" until one is confirmed.
    To fill a Coming Soon entry, replace it with a full entry like those above.
    ===================================================================== */
 const BOOKS = [
-  { title: "Science and the Old Testament", cover: "science-old-testament.jpg", link: "",
+  { title: "Science and the Old Testament", cover: "science-old-testament.jpg", price: "$29.99", link: "https://www.cedarfort.com/products/science-and-the-old-testament",
     short: "The now-known science behind familiar Old Testament stories, written to help readers think and ponder the scriptures more deeply.",
     details: ["Who wrote the Old Testament? Dr. Stephens believes it was written by inspired prophets through the filter of the writer’s mind, time, and paradigms. He has always loved its stories and been curious about the science behind them.", "In some cases, modern scientific discoveries enhance the specifics of a story. In others, as with Jacob’s piebald sheep, science helps us understand the cultural mindset and paradigms from which the Old Testament emerged."] },
-  { title: "Science and the New Testament", sub: "Book Two of the Series Science and the Scriptures", cover: "science-new-testament.jpg", link: "",
+  { title: "Science and the New Testament", sub: "Book Two of the Series Science and the Scriptures", cover: "science-new-testament.jpg", price: "$29.99", sample: true, link: "",
     short: "The science associated with events recorded in the New Testament, written from a faithful perspective.",
     details: ["This book follows Science and the Old Testament and addresses the science associated with many of the events recorded in the New Testament, written from a faithful perspective of where science and religion embrace, without compromising either.", "Dr. Stephens asks what he would have seen among the five thousand, or in the closed room as Jesus ate fish and honeycomb, and what the testimony of the literal resurrection means from a scientific perspective."] },
-  { title: "Noah's Flood and the Philosophies of Men", cover: "noahs-flood.jpg", link: "",
+  { title: "Noah's Flood and the Philosophies of Men", cover: "noahs-flood.jpg", price: "$24.99", sample: true, link: "",
     short: "What if the Biblical story of the Great Flood is mostly true, but a few details got mixed up along the way?",
     details: ["What if, during the Babylonian captivity, the Judean story of Noah’s Flood got mixed up with the Gilgamesh Epic of Utnapishtim’s flood? Dr. Stephens compares the two accounts and traces the ark’s possible journey according to Latter-day Saint theology.", "As an ardent Christian, he believes there was a real flood in Noah’s experience. As a biologist, he doesn’t believe all plant and animal life was wiped out and had to start from scratch a little over 4000 years ago."] },
-  { title: "The Image of God?", sub: "Nobody's Perfect: Our Divine Nature, Mortal Journey, and the Beauty of Imperfection", cover: "image-of-god.jpg", link: "",
+  { title: "The Image of God?", sub: "Nobody's Perfect: Our Divine Nature, Mortal Journey, and the Beauty of Imperfection", cover: "image-of-god.jpg", price: "$19.99", sample: true, link: "",
     short: "An anatomist and developmental biologist shares his knowledge of mortal life, prenatal development, and birth defects.",
     details: ["Dr. Stephens, an anatomist, developmental biologist, and dysmorphologist, shares his knowledge concerning mortal life, prenatal development, and birth defects, within the theology of The Church of Jesus Christ of Latter-day Saints.", "All of us have birth defects, and nobody’s perfect. The solution is tolerance of ourselves and of those around us, each struggling with his or her own imperfections."] },
-  { title: "The Immortal Messiah", sub: "The Physiology of Resurrected Beings", cover: "immortal-messiah.jpg", meta: "September 2022, Cedar Fort Publishing", link: "",
+  { title: "The Immortal Messiah", sub: "The Physiology of Resurrected Beings", cover: "immortal-messiah.jpg", meta: "September 2022, Cedar Fort Publishing", price: "$18.99", link: "https://www.barnesandnoble.com/w/the-immortal-messiah-trent-stephens/1141241523",
     short: "What eyewitness accounts of Christ’s resurrection imply, anatomically and physiologically, about resurrected bodies.",
     details: ["Eyewitness accounts tell us that the resurrected Christ looked somewhat different, could enter a room without using a door, had a body of flesh and bones, retained the marks of His crucifixion, and could eat food.", "These details carry large anatomical and physiological implications. The book examines them to give more understanding of God, Jesus Christ, and ourselves."] },
-  { title: "Who Is Adam?", sub: "Where Science Meets Religion", cover: "who-is-adam.jpg", meta: "November 2023", link: "",
+  { title: "Who Is Adam?", sub: "Where Science Meets Religion", cover: "who-is-adam.jpg", meta: "November 2023", price: "$19.99", sample: true, link: "",
     short: "A scientist and Latter-day Saint examines the man who appears to stand so firmly between science and religion.",
     details: ["Perhaps the greatest contributor to the perceived gulf between the Biblical and scientific stories of creation is the man Adam. Dr. Stephens proposes that Adam’s critical role in the Plan of Salvation occurred primarily in the premortal realm of spirits.", "The book addresses questions such as whether there was blood or death before the Fall, writing from the perspective of science and of what the scriptures actually say and don’t say."] },
-  { title: "Latter-day Saint White Ops", cover: "white-ops.jpg", meta: "July 2023", link: "",
+  { title: "Latter-day Saint White Ops", cover: "white-ops.jpg", meta: "July 2023", price: "$14.99", sample: true, link: "",
     short: "A largely tongue-in-cheek and autobiographical account of the real power behind the Church’s preparedness program.",
     details: ["Ted Koppel’s Lights Out praised the preparedness program of The Church of Jesus Christ of Latter-day Saints but hardly mentioned who was responsible for it.", "Growing up in the home of a Relief Society mother and wife, and later serving as a bishop, Dr. Stephens offers a largely tongue-in-cheek and autobiographical account of who is really in charge."] },
-  { title: "The Last Tournament", sub: "Book 2 of William de Braose, Squire of Winchester", cover: "last-tournament.jpg", meta: "July 2023", link: "",
+  { title: "The Last Tournament", sub: "Book 2 of William de Braose, Squire of Winchester", cover: "last-tournament.jpg", meta: "July 2023", price: "$19.99", sample: true, link: "",
     short: "England, 1232. Young William rides beside his father to his first tournament, unaware of the storm brewing at court.",
     details: ["England was a very dangerous place in 1232. Twenty-four-year-old Henry III was controlled by the powerful men around him. As William rode beside his father to the great Salisbury Tournament, his first and his father’s last, he was largely unaware of what was coming.", "Much of the book is true. Most of the noble families were real people, and every place is real, with GPS coordinates to find it on Google Earth. A closing section, “Learn More About It,” is an illustrated glossary of the book’s words, names, and places."] },
   { comingSoon: true },
@@ -341,6 +345,12 @@ function coverFrame(b) {
 }
 
 const shelf = document.getElementById("shelf");
+function priceTag(b) {
+  const p = el("p", "price", b.price);
+  if (b.sample) p.append(el("small", "", "Sample price"));
+  return p;
+}
+
 BOOKS.forEach((b, i) => {
   const li = el("li", "book" + (b.comingSoon ? " pending" : ""));
   li.append(coverFrame(b));
@@ -349,6 +359,7 @@ BOOKS.forEach((b, i) => {
     body.append(el("h3", "", b.title));
     if (b.sub) body.append(el("p", "book-sub", b.sub));
     body.append(el("p", "book-desc", b.short));
+    body.append(priceTag(b));
     const btn = el("button", "btn", "View Book");
     btn.type = "button";
     btn.setAttribute("aria-label", "View details: " + b.title);
@@ -370,6 +381,7 @@ function openBook(b) {
   const body = document.getElementById("d-body");
   const paras = b.details && b.details.length ? b.details : ["Details for this book will be added soon."];
   body.replaceChildren(...paras.map(t => el("p", "", t)));
+  document.getElementById("d-price").replaceChildren(...(b.price ? priceTag(b).childNodes : []));
   const link = document.getElementById("d-link");
   link.hidden = !b.link;
   if (b.link) link.href = b.link; else link.removeAttribute("href");
